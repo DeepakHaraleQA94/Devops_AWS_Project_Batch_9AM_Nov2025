@@ -17,7 +17,8 @@ public class ValidateAboutUs {
 		driver.findElement(By.xpath("(//button[@type='button']) [5]")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.linkText("About Us")).click();
-	 String	title = driver.getTitle();
+	 String	title = driver.getTitle();\
+		 Assert.assertEquals(title, "hi", "title not matching");
 	 if(title.equals("About Us | yes")) {
 		 System.out.println("passed");
 		 
